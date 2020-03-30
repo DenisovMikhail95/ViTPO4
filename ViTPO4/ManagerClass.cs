@@ -27,5 +27,10 @@ namespace ViTPO4
             else
                 IndexPlayer++;
         }
+
+        public void checkWord(string answer)
+        {
+
+        }
     }
 }

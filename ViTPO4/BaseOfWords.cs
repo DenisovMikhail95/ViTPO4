@@ -15,5 +15,15 @@ namespace ViTPO4
         {
             Cities = File.ReadAllLines("cities.txt");
         }
+
+        public bool searchCity(string answer)
+        {
+            foreach (var city in Cities)
+            {
+                if (city == answer)
+                    return true;
+            }
+            return false;
+        }
     }
 }

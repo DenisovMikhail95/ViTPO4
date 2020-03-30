@@ -63,5 +63,11 @@ namespace TestGame
             Assert.AreEqual(1121, baseWords.Cities.Length);
         }
 
+        [TestMethod]
+        public void testSearchCity()
+        {
+            BaseOfWords baseWords = new BaseOfWords();
+            Assert.AreEqual(true, baseWords.searchCity("Барнаул"));
+        }
     }
 }
