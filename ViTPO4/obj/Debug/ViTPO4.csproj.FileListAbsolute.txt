@@ -1,0 +1,9 @@
+D:\GitHub\ViTPO4\ViTPO4\bin\Debug\ViTPO4.exe.config
+D:\GitHub\ViTPO4\ViTPO4\bin\Debug\ViTPO4.exe
+D:\GitHub\ViTPO4\ViTPO4\bin\Debug\ViTPO4.pdb
+D:\GitHub\ViTPO4\ViTPO4\obj\Debug\ViTPO4.csprojAssemblyReference.cache
+D:\GitHub\ViTPO4\ViTPO4\obj\Debug\ViTPO4.Form1.resources
+D:\GitHub\ViTPO4\ViTPO4\obj\Debug\ViTPO4.Properties.Resources.resources
+D:\GitHub\ViTPO4\ViTPO4\obj\Debug\ViTPO4.csproj.GenerateResource.cache
+D:\GitHub\ViTPO4\ViTPO4\obj\Debug\ViTPO4.exe
+D:\GitHub\ViTPO4\ViTPO4\obj\Debug\ViTPO4.pdb
