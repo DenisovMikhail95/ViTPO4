@@ -92,5 +92,28 @@ namespace TestGame
             Assert.AreEqual(manager.checkWord("Норильск"), 1);
 
         }
+
+        [TestMethod]
+        public void determWinner()
+        {
+            BaseOfWords baseWords = new BaseOfWords();
+            ManagerClass manager = new ManagerClass(baseWords);
+
+            manager.ListPlayers.Add(new Player("Ilon"));
+            manager.ListPlayers[manager.ListPlayers.Count - 1].points = 10;
+            manager.ListPlayers.Add(new Player("Mask"));
+            manager.ListPlayers[manager.ListPlayers.Count - 1].points = 12;
+            manager.ListPlayers.Add(new Player("Oleg"));
+            manager.ListPlayers[manager.ListPlayers.Count - 1].points = 11;
+
+            var winners = manager.endGame();
+            Assert.AreEqual(winners[0],"Mask");
+
+            manager.ListPlayers[manager.ListPlayers.Count - 1].points = 12;
+            winners.Clear();
+            winners = manager.endGame();
+            Assert.AreEqual(winners[0], "Mask");
+            Assert.AreEqual(winners[1], "Oleg");
+        }
     }
 }

@@ -66,5 +66,23 @@ namespace ViTPO4
 
             return 1;
         }
+
+        public List<string> endGame()
+        {
+            int max = 0;
+            List<string> winners = new List<string>();
+
+            for(int i = 0; i < ListPlayers.Count; i++)
+            {
+                if (ListPlayers[i].points > max)
+                    max = ListPlayers[i].points;
+            }
+            for (int i = 0; i < ListPlayers.Count; i++)
+            {
+                if (ListPlayers[i].points == max)
+                    winners.Add(ListPlayers[i].Name);
+            }
+            return winners;
+        }
     }
 }

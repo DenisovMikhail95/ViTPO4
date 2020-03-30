@@ -79,10 +79,9 @@ namespace ViTPO4
             label1.Enabled = false;
             label2.Enabled = false;
             numericUpDown1.Enabled = false;
-
             button2.Enabled = true;
+            button4.Enabled = true;
             button1.Enabled = false;
-
             groupBox1.Enabled = true;
 
             //инициализация игры
@@ -118,6 +117,10 @@ namespace ViTPO4
 
         private void button2_Click(object sender, EventArgs e)
         {
+            managerClass = null;
+            myTimer = null;
+            timer1.Stop();
+
             foreach (TextBox textBox in this.Controls.OfType<TextBox>())
             {
                 textBox.Enabled = true;
@@ -129,13 +132,21 @@ namespace ViTPO4
             label1.Enabled = true;
             label2.Enabled = true;
             numericUpDown1.Enabled = true;
-
             button1.Enabled = true;
             button2.Enabled = false;
-
+            button4.Enabled = false;
             groupBox1.Enabled = true;
+            managerClass = null;
+            myTimer = null;
+            timer1.Stop();
 
+            label3.Text = "0";
+            label9.Text = "";
+            label6.Text = "";
+            label7.Text = "";
+            textBox6.Text = "";
 
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -188,7 +199,21 @@ namespace ViTPO4
 
         private void button4_Click(object sender, EventArgs e)
         {
+            List<string> winners = new List<string>();
+            winners= managerClass.endGame();
 
+            string message = "Победители: ";
+            for(int i = 0; i < winners.Count; i++)
+            {
+                message += winners[i] + ", ";
+            }
+            message = message.Remove(message.Length - 2);
+            message += ". Поздравляем!";
+
+            MessageBox.Show(message);
+
+            button2_Click(null, null);
         }
+
     }
 }

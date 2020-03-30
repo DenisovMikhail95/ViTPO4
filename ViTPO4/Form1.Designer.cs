@@ -93,6 +93,8 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(18, 138);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(77, 17);
@@ -104,6 +106,8 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(18, 199);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(77, 17);
@@ -115,6 +119,8 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Location = new System.Drawing.Point(18, 260);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(77, 17);
@@ -139,7 +145,6 @@
             // 
             // textBox3
             // 
-            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(18, 161);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
@@ -147,7 +152,6 @@
             // 
             // textBox4
             // 
-            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(18, 222);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -155,7 +159,6 @@
             // 
             // textBox5
             // 
-            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(18, 283);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
@@ -194,7 +197,7 @@
             this.numericUpDown1.Size = new System.Drawing.Size(48, 20);
             this.numericUpDown1.TabIndex = 12;
             this.numericUpDown1.Value = new decimal(new int[] {
-            20,
+            60,
             0,
             0,
             0});
@@ -278,9 +281,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(192, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 22);
+            this.label6.Size = new System.Drawing.Size(15, 22);
             this.label6.TabIndex = 19;
-            this.label6.Text = "Player";
+            this.label6.Text = ".";
             // 
             // label7
             // 
@@ -288,9 +291,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(192, 167);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 22);
+            this.label7.Size = new System.Drawing.Size(15, 22);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Word";
+            this.label7.Text = ".";
             // 
             // label8
             // 
@@ -318,9 +321,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(6, 16);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 18);
+            this.label9.Size = new System.Drawing.Size(12, 18);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Очки";
+            this.label9.Text = ".";
             // 
             // groupBox2
             // 
@@ -344,6 +347,7 @@
             // 
             // button4
             // 
+            this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(218, 262);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(108, 23);
@@ -374,7 +378,7 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Игра \"Города России\"";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
