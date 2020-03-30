@@ -125,9 +125,12 @@ namespace ViTPO4
             {
                 textBox.Enabled = true;
                 textBox.Text = "";
-            }             
+            }
             foreach (CheckBox checkBox in this.Controls.OfType<CheckBox>())
+            {
                 checkBox.Enabled = true;
+                checkBox.Checked = true;
+            }
 
             label1.Enabled = true;
             label2.Enabled = true;
