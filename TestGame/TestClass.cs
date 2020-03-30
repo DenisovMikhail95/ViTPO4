@@ -22,8 +22,8 @@ namespace TestGame
         {
             ManagerClass manager = new ManagerClass();
 
-            manager.ListPlayers.Add(new Player());
-            manager.ListPlayers.Add(new Player());
+            manager.ListPlayers.Add(new Player("Ivan"));
+            manager.ListPlayers.Add(new Player("Pasha"));
 
             manager.switchPlayer();
             Assert.AreEqual(1, manager.IndexPlayer);
@@ -35,8 +35,8 @@ namespace TestGame
         public void timerCallSwitchPlayers()
         {
             ManagerClass manager = new ManagerClass();
-            manager.ListPlayers.Add(new Player());
-            manager.ListPlayers.Add(new Player());
+            manager.ListPlayers.Add(new Player("Ivan"));
+            manager.ListPlayers.Add(new Player("Pasha"));
 
             Timer MyTimer = new Timer(manager, 2);
             MyTimer.takeOneSecond();
@@ -44,5 +44,17 @@ namespace TestGame
 
             Assert.AreEqual(1, manager.IndexPlayer);
         }
+
+        [TestMethod]
+        public void addAndResetPlsyersPonint()
+        {
+            Player player1 = new Player("Ivan");
+            player1.addPoint();
+            Assert.AreEqual(1, player1.points);
+            player1.resetPoint();
+            Assert.AreEqual(0, player1.points);
+        }
+
+
     }
 }
