@@ -30,5 +30,19 @@ namespace TestGame
             manager.switchPlayer();
             Assert.AreEqual(0, manager.IndexPlayer);
         }
+
+        [TestMethod]
+        public void timerCallSwitchPlayers()
+        {
+            ManagerClass manager = new ManagerClass();
+            manager.ListPlayers.Add(new Player());
+            manager.ListPlayers.Add(new Player());
+
+            Timer MyTimer = new Timer(manager, 2);
+            MyTimer.takeOneSecond();
+            MyTimer.takeOneSecond();
+
+            Assert.AreEqual(1, manager.IndexPlayer);
+        }
     }
 }

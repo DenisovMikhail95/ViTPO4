@@ -10,8 +10,26 @@ namespace ViTPO4
     {
         public int Seconds { get; set; } //количество секунд
 
-        public void takeOneSecond() { Seconds--; } //вычитание секунд
-
         public ManagerClass Manager { get; set; } //управляющий класс
+
+        public Timer(){}
+        public Timer(ManagerClass manager, int sec)
+        {
+            Manager = manager;
+            Seconds = sec;
+        }
+
+        public void takeOneSecond()//вычитание секунд
+        { 
+            Seconds--;
+            checkNeedSwitchPlayer();
+        } 
+
+        public void checkNeedSwitchPlayer() //проверка надобности переключения игрока
+        {
+            if (Seconds == 0)
+                Manager.switchPlayer();
+        }
+
     }
 }
