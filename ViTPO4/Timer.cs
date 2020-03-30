@@ -8,8 +8,10 @@ namespace ViTPO4
 {
     public class Timer
     {
-        public int Seconds { get; set; }
+        public int Seconds { get; set; } //количество секунд
 
-        public void takeOneSecond() { Seconds--; }
+        public void takeOneSecond() { Seconds--; } //вычитание секунд
+
+        public ManagerClass Manager { get; set; } //управляющий класс
     }
 }
