@@ -32,6 +32,16 @@ namespace ViTPO4
 
         public int checkWord(string answer)
         {
+            //несовпадение со словарем
+            if (BaseWords.searchCity(answer) == false)
+                return 0;
+
+            if (UsedCities.Count == 0)
+            {
+                UsedCities.Add(answer);
+                return 1;
+            }
+
             string pastWord = UsedCities[UsedCities.Count - 1];
             //несовпадение последней бувы с первой
             if (pastWord[pastWord.Length - 1] == 'ы' || pastWord[pastWord.Length - 1] == 'ь' || pastWord[pastWord.Length - 1] == 'Ы' || pastWord[pastWord.Length - 1] == 'Ь')
@@ -44,10 +54,6 @@ namespace ViTPO4
                 if (string.Compare(answer[0].ToString(), pastWord[pastWord.Length - 1].ToString(), true) != 0)
                     return -2;
             }
-
-            //несовпадение со словарем
-            if (BaseWords.searchCity(answer) == false)
-                return 0;
             
             // слово уже использовалось
             foreach(var city in UsedCities)
