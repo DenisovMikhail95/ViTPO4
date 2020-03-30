@@ -20,7 +20,8 @@ namespace TestGame
         [TestMethod]
         public void correctSwitchPlayers()
         {
-            ManagerClass manager = new ManagerClass();
+            BaseOfWords baseWords = new BaseOfWords();
+            ManagerClass manager = new ManagerClass(baseWords);
 
             manager.ListPlayers.Add(new Player("Ivan"));
             manager.ListPlayers.Add(new Player("Pasha"));
@@ -34,7 +35,8 @@ namespace TestGame
         [TestMethod]
         public void timerCallSwitchPlayers()
         {
-            ManagerClass manager = new ManagerClass();
+            BaseOfWords baseWords = new BaseOfWords();
+            ManagerClass manager = new ManagerClass(baseWords);
             manager.ListPlayers.Add(new Player("Ivan"));
             manager.ListPlayers.Add(new Player("Pasha"));
 
@@ -68,6 +70,27 @@ namespace TestGame
         {
             BaseOfWords baseWords = new BaseOfWords();
             Assert.AreEqual(true, baseWords.searchCity("Барнаул"));
+        }
+
+        [TestMethod]
+        public void checkWordTesting()
+        {
+            BaseOfWords baseWords = new BaseOfWords();
+            ManagerClass manager = new ManagerClass(baseWords);
+
+            manager.UsedCities.Add("Новосибирск");
+            Assert.AreEqual(manager.checkWord("Кемерово"), 1);
+
+            Assert.AreEqual(manager.checkWord("Оаку"), 0);
+
+            manager.UsedCities[0] = "Омск";
+            Assert.AreEqual(manager.checkWord("Омск"), -1);
+
+            Assert.AreEqual(manager.checkWord("Барнаул"), -2);
+
+            manager.UsedCities.Add("Астрахань");
+            Assert.AreEqual(manager.checkWord("Норильск"), 1);
+
         }
     }
 }

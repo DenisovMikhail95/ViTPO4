@@ -20,7 +20,7 @@ namespace ViTPO4
         {
             foreach (var city in Cities)
             {
-                if (city == answer)
+                if (string.Compare(city, answer, true) == 0)
                     return true;
             }
             return false;
