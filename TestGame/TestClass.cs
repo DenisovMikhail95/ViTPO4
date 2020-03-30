@@ -46,7 +46,7 @@ namespace TestGame
         }
 
         [TestMethod]
-        public void addAndResetPlsyersPonint()
+        public void addAndResetPlayersPoint()
         {
             Player player1 = new Player("Ivan");
             player1.addPoint();
@@ -55,6 +55,13 @@ namespace TestGame
             Assert.AreEqual(0, player1.points);
         }
 
+        [TestMethod]
+        public void loadBaseOfCities()
+        {
+            BaseOfWords baseWords = new BaseOfWords();
+
+            Assert.AreEqual(1121, baseWords.Cities.Length);
+        }
 
     }
 }
